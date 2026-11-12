@@ -56,7 +56,7 @@ nav a{font-family:var(--f-display);font-weight:500;font-size:16px;text-decoratio
 nav a:hover,nav a[aria-current]{background:var(--sun-soft)}
 nav a.cta{background:var(--leaf);color:var(--bg)}
 nav a.cta:hover,nav a.cta[aria-current]{background:var(--ink)}
-nav a[href="#contact"]{margin-right:10px}
+nav a[href="#mission"]{margin-right:6px}nav a[href="#contact"]{margin-left:6px}
 .vnew{position:absolute;top:10px;right:10px;font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;background:var(--sun);color:#1E3528;padding:4px 10px;border-radius:999px;box-shadow:0 2px 6px rgba(0,0,0,.18)}
 .wvid .vnew{position:static;margin-left:auto;flex:none;box-shadow:none;font-size:11px;padding:3px 9px}
 .wvid .vsoon{margin-left:auto;font-size:12px;font-weight:700;color:var(--muted);white-space:nowrap}
@@ -807,12 +807,11 @@ dialog{max-height:calc(100dvh - 32px);overflow:auto}
     </a>
     <nav aria-label="Main">
       <a href="#mission">Mission</a>
-      <a href="#resources">Get involved</a>
-      <a href="#contact">Contact</a>
+      <a class="cta" href="#resources" data-nav="resources">Get involved</a>
       <a class="cta" href="#words" data-nav="words">Vocab</a>
       <a class="cta" href="#places" data-nav="places">Places</a>
       <a class="cta" href="#watch" data-nav="watch">Watch</a>
-      <a class="cta" href="#resources" data-nav="resources">Resources</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
