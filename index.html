@@ -376,7 +376,8 @@ dialog{max-height:calc(100dvh - 32px);overflow:auto}
 }
 @media (max-width:640px){.hero{grid-template-columns:1fr}.hero .sun{display:none}}
 @media (max-width:480px){.follow{grid-template-columns:1fr}}
-.nextvid{display:grid;grid-template-columns:200px minmax(0,1fr);gap:28px;align-items:center;padding:24px;border-radius:24px;background:var(--sun-soft);margin-bottom:36px}
+.rstart{display:grid;gap:22px;margin-bottom:52px}.rstart .head{margin-bottom:0}
+.nextvid{display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:center;padding:20px;border-radius:22px;background:var(--sun-soft)}.nvtext h3{font-size:clamp(22px,2.6vw,28px)}
 .nvthumb{aspect-ratio:9/16;border-radius:18px;background:repeating-linear-gradient(135deg,var(--leaf-soft) 0 12px,var(--bg) 12px 24px);border:2px dashed var(--leaf);display:grid;place-items:center}
 .nvthumb span{font-family:var(--f-display);font-weight:600;color:var(--leaf);font-size:15px;background:var(--surface);padding:6px 12px;border-radius:999px}
 .nvtext{display:grid;gap:10px}
@@ -386,7 +387,7 @@ dialog{max-height:calc(100dvh - 32px);overflow:auto}
 .nvsteps b{font-family:var(--f-display);font-weight:600}
 .rtabs .chip .ct{font-size:13px;opacity:.7;margin-left:2px}
 .rdesc{color:var(--muted);margin:-10px 0 22px;font-size:16px;min-height:1.6em}
-@media (max-width:640px){.nextvid{grid-template-columns:1fr;gap:16px;padding:16px}.nvthumb{aspect-ratio:16/7}}
+@media (max-width:640px){.nextvid{grid-template-columns:84px minmax(0,1fr);gap:14px;padding:14px}.nvthumb span{font-size:10px;padding:4px 6px;text-align:center}}
 .pcredit{font-size:12px;color:var(--muted);margin:6px 28px -6px;text-align:right}
 </style>
 
@@ -806,7 +807,7 @@ dialog{max-height:calc(100dvh - 32px);overflow:auto}
     </a>
     <nav aria-label="Main">
       <a href="#mission">Mission</a>
-      <a href="#start">Get involved</a>
+      <a href="#resources">Get involved</a>
       <a href="#contact">Contact</a>
       <a class="cta" href="#words" data-nav="words">Vocab</a>
       <a class="cta" href="#places" data-nav="places">Places</a>
@@ -824,8 +825,7 @@ dialog{max-height:calc(100dvh - 32px);overflow:auto}
         <h1 style="margin-top:12px">Cities built for <em>people</em>, one block at a time.</h1>
         <p class="lead">Human Scaled connects neighbors with the groups, tools and ideas that make towns walkable, beautiful and financially strong. You don't need a planning degree. You need a place to start.</p>
         <div class="btns">
-          <a class="btn solid" href="#resources">Explore resources</a>
-          <a class="btn" href="#start">How to get involved</a>
+          <a class="btn solid" href="#resources">Get involved</a>
         </div>
       </div>
       <div class="sun">
@@ -868,8 +868,8 @@ dialog{max-height:calc(100dvh - 32px);overflow:auto}
       <div class="rhead">
         <div class="head" style="margin:0">
           <p class="eyebrow">Resources</p>
-          <h2>Organizations ready to help you</h2>
-          <p>Groups that teach, organize and build better places. Tap one to see how to get involved.</p>
+          <h2>Groups organizing for better places</h2>
+          <p>Join people already working to change their towns. Tap one to see how to get involved.</p>
         </div>
       </div>
       <div class="hs" data-hs>
@@ -977,25 +977,32 @@ dialog{max-height:calc(100dvh - 32px);overflow:auto}
   </div>
   <section id="resources" class="band" style="padding-block:40px 64px">
     <div class="wrap">
-      <div class="nextvid">
-        <div class="nvthumb" aria-hidden="true"><span>Video coming soon</span></div>
-        <div class="nvtext">
-          <p class="eyebrow">Start here</p>
-          <h2>How to get involved in your hometown</h2>
-          <p>A short video for everyone, no planning degree needed. Where decisions about your streets get made, and how to get a seat at the table.</p>
-          <ol class="nvsteps">
-            <li><b>Find your planning department.</b> Every city and county has one. Look up who runs it and when the planning commission meets.</li>
-            <li><b>Learn the basics of zoning.</b> Pull up your zoning map and see what is allowed on your block, and what is not.</li>
-            <li><b>Show up and speak.</b> Comment at a hearing, join a local group below, or bring two neighbors with you next time.</li>
-          </ol>
+      <div class="rstart">
+        <div class="head">
+          <p class="eyebrow">Get involved</p>
+          <h2>How to change your block</h2>
+          <p>Three steps, from noticing to doing. None of the first steps cost money, and you can start this week.</p>
         </div>
+        <div class="nextvid">
+          <div class="nvthumb" aria-hidden="true"><span>Coming soon</span></div>
+          <div class="nvtext">
+            <p class="eyebrow">Start here</p>
+            <h3>How to get involved in your hometown</h3>
+            <p>A short video for everyone on the basics: finding your planning department, reading your zoning map, and speaking up where decisions get made.</p>
+          </div>
+        </div>
+        <div id="rs-path"></div>
+      </div>
+      <div class="head" style="margin-bottom:18px">
+        <p class="eyebrow">Resource library</p>
+        <h2>Organizations ready to help</h2>
       </div>
       <div class="filters rtabs" role="group" aria-label="Filter resources">
-        <button class="chip" type="button" data-f="all" aria-pressed="true">Everything <span class="ct"></span></button>
-        <button class="chip" type="button" data-f="Education" aria-pressed="false">Education <span class="ct"></span></button>
-        <button class="chip" type="button" data-f="Organize" aria-pressed="false">Organize <span class="ct"></span></button>
-        <button class="chip" type="button" data-f="Professional" aria-pressed="false">Professional <span class="ct"></span></button>
-        <button class="chip" type="button" data-f="Design" aria-pressed="false">Design <span class="ct"></span></button>
+        <button class="chip" type="button" data-f="all" aria-pressed="true">Everything</button>
+        <button class="chip" type="button" data-f="Education" aria-pressed="false">Education</button>
+        <button class="chip" type="button" data-f="Organize" aria-pressed="false">Organize</button>
+        <button class="chip" type="button" data-f="Professional" aria-pressed="false">Professional</button>
+        <button class="chip" type="button" data-f="Design" aria-pressed="false">Design</button>
       </div>
       <p class="rdesc" id="rdesc"></p>
       <div class="grid" id="grid"></div>
@@ -1249,7 +1256,7 @@ function resCard(r,i){
   const m=document.createElement("span");m.className="more";m.textContent="See how to get involved →";
   b.append(top,tagsEl(r.tags),p,m);b.addEventListener("click",()=>openPop(i));return b}
 R.forEach((r,i)=>grid.appendChild(resCard(r,i)));
-["Strong Towns","DPZ CoDesign","Better Block Foundation","Congress for the New Urbanism","Citymakers Collective","Incremental Development Alliance","Parking Reform Network","Building Culture"].forEach(n=>{const i=R.findIndex(x=>x.name===n);if(i>=0){const c=resCard(R[i],i);c.setAttribute("role","listitem");rstrip.appendChild(c)}});
+R.forEach((r,i)=>{if(!r.tags.includes("Organize"))return;const c=resCard(r,i);c.setAttribute("role","listitem");rstrip.appendChild(c)});
 (function(){const a=document.createElement("a");a.className="more-card";a.href="#resources";a.innerHTML="<span>→</span>See all "+R.length+" resources";rstrip.appendChild(a)})();
 
 const dlg=$("#pop");let lastBtn=null;
@@ -1277,7 +1284,8 @@ document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{
 }));
 const RDESC={all:"Every organization, sorted by what you want to do next.",Education:"Built for learning: courses, books, research, videos and toolkits.",Organize:"Built for directly creating change in your town, with your neighbors.",Professional:"Networks for the people who plan, design, build and restore places.",Design:"Firms and studios known for designing good places."};
 $("#rdesc").textContent=RDESC.all;
-document.querySelectorAll(".rtabs .chip").forEach(c=>{const f=c.dataset.f;c.querySelector(".ct").textContent=R.filter(r=>f==="all"||r.tags.includes(f)).length});
+{const p=$("#start .path");if(p)$("#rs-path").replaceWith(p.cloneNode(true))}
+
 
 /* ---------- Places catalog ---------- */
 const CATS=[
